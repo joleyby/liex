@@ -1,0 +1,65 @@
+{
+  "name": "liex",
+  "version": "5.3.4",
+  "type": "module",
+  "license": "MIT",
+  "author": "Evan You",
+  "description": "Native-ESM powered web dev build tool",
+  "bin": {
+    "liex": "bin/liex.js"
+  },
+  "keywords": [
+    "frontend",
+    "framework",
+    "hmr",
+    "dev-server",
+    "build-tool",
+    "liex"
+  ],
+  "main": "./dist/node/index.js",
+  "types": "./dist/node/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./types/index.d.mts",
+        "default": "./dist/node/index.js"
+      },
+      "require": {
+        "types": "./types/index.d.cts",
+        "default": "./index.cjs"
+      }
+    },
+    "./runtime": {
+      "types": "./dist/node/runtime.d.ts",
+      "import": "./dist/node/runtime.js"
+    },
+    "./client/*": "./client/*",
+    "./types/*": {
+      "types": "./types/*"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": "^18.0.0 || >=22.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joleyby/liex.git",
+    "directory": "packages/liex"
+  },
+  "bugs": {
+    "url": "https://github.com/joleyby/liex/issues"
+  },
+  "homepage": "https://liexjs.dev",
+  "funding": "https://github.com/joleyby/liex?sponsor=1",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "dev": "",
+    "build": ""
+  }
+}
